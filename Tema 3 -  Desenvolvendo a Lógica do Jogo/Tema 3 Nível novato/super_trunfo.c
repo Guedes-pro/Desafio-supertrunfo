@@ -8,7 +8,7 @@ int main(){
      char estado1, estado2;
      char codigo1[5], codigo2[5];
      char cidade1[30], cidade2[30];
-     int populacao[2];
+     unsigned int populacao[2];
      int pontos_turisticos[2];
      float area[2];
      float pib[2];
@@ -40,7 +40,7 @@ int main(){
      cidade1[strcspn(cidade1, "\n")]='\0';//Use o *='\0'*, para não deixar o espaço em branco apos *Popuação*.
 
      printf("População: ");
-     scanf("%d", &populacao[0]);
+     scanf("%u", &populacao[0]);
 
      printf("Área (em km²): ");
      scanf("%f", &area[0]);
@@ -70,7 +70,7 @@ int main(){
      printf("Estado: %c\n", estado1);
      printf("Código: %s\n", codigo1);
      printf("Nome da Cidade: %s\n", cidade1);
-     printf("População: %d\n", populacao[0]);
+     printf("População: %u\n", populacao[0]);
      printf("Área: %.2f km²\n", area[0]);
      printf("PIB: %.2f bilhões de reais\n", pib[0]);
      printf("Número de Pontos Turísticos: %d\n", pontos_turisticos[0]);
@@ -102,7 +102,7 @@ int main(){
      cidade2[strcspn(cidade2, "\n")]='\0';
      
      printf("População: ");
-     scanf("%d", &populacao[1]);
+     scanf("%u", &populacao[1]);
      
      printf("Área (em km²): ");
      scanf("%f", &area[1]);
@@ -131,7 +131,7 @@ int main(){
      printf("Estado: %c\n", estado2);
      printf("Código: %s\n", codigo2);
      printf("Nome da Cidade: %s\n", cidade2);
-     printf("População: %d\n", populacao[1]);
+     printf("População: %u\n", populacao[1]);
      printf("Área: %.2f km²\n", area[1]);
      printf("PIB: %.2f bilhões de reais\n", pib[1]);
      printf("Número de Pontos Turísticos: %d\n", pontos_turisticos[1]);
@@ -148,8 +148,8 @@ int main(){
      //População:
 
      printf("Atributo - População\n");
-     printf("Carta 1 (%s): %d\n", cidade1, populacao[0]);
-     printf("Carta 2 (%s): %d\n", cidade2, populacao[1]);
+     printf("Carta 1 (%s): %u\n", cidade1, populacao[0]);
+     printf("Carta 2 (%s): %u\n", cidade2, populacao[1]);
         if(populacao[0] > populacao[1]){
             printf(" Carta vencedora: Carta 1 (%s)\n\n", cidade1); 
         }
