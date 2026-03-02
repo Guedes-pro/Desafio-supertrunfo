@@ -21,43 +21,46 @@ int main(){
      //------ PRIMEIRA CARTA ------
 
      printf("Informe os dados da primeira carta \n\n");
-     // Para adicionar novos atributos à Carta 1, adcione conforme o exemplo:
-     // printf("*ATRITBUTO A SER UTILIZADO: *")
-     // scanf("ESPECIFICADOR DE FORMATO", VARIÁVEL *se for o caso adcione o índicie[0]*)
+     /*Para adicionar novos atributos à Carta 1, adcione conforme o exemplo:
+      printf("*ATRITBUTO A SER UTILIZADO: *")
+      scanf("ESPECIFICADOR DE FORMATO", VARIÁVEL *se for o caso adcione o índicie[0]*)*/
      // Use o *getchar()* após o scanf  do codigo para "limpar" o caractere que fica sobrando. Se não usar, o fgets lê o vazio.
      // Use o fgets para inserção das cidades, pois algumas tem nomes compostos.
 
      printf("Estado: ");
      scanf("%c", &estado1);
+
      printf("Código: ");
      scanf("%s", codigo1);// Por ser string não é necessário o "&".
+
      getchar(); 
+
      printf("Nome da Cidade: ");
      fgets(cidade1, 30, stdin);
      cidade1[strcspn(cidade1, "\n")]='\0';//Use o *='\0'*, para não deixar o espaço em branco apos *Popuação*.
+
      printf("População: ");
      scanf("%d", &populacao[0]);
+
      printf("Área (em km²): ");
      scanf("%f", &area[0]);
+
      printf("PIB (em bihões): ");
      scanf("%f", &pib[0]);
+
      printf("Número de Pontos Turísticos: ");
      scanf("%d", &pontos_turisticos[0]);
 
+
      // **Cálculo do PIB per Capita, Densidade Populacional e do Super Poder**
      // Feito a Conversão Explicita na variável população
-     
 
      pib_per[0] = (pib[0] *  pow(10, 9)) / (float) populacao[0]; 
      populcao_den[0] = (float) populacao[0] / area[0];
-     super_poder[0] = (float) populacao[0] + (float) pontos_turisticos[0] + pib[0] +
-                        area[0] + pib_per[0] + (1 / populcao_den[0]); 
+     super_poder[0] = (float) populacao[0] + (float) pontos_turisticos[0] + pib[0] + area[0] + pib_per[0] + (1 / populcao_den[0]); 
 
      
-
-     
-     
-     // ---LEMBRAR---
+     // ---APRESENTAÇÃO DA CARTA 1---
      //*TODOS* os atributos adicionados terão de aparecer na apresentação da carta.
      /* Exemplo:
       printf("\nCarta 1\n");
@@ -76,29 +79,37 @@ int main(){
      printf("Super Poder: %.2f\n\n", super_poder[0]);
      
      
+
      //------ SEGUNDA CARTA ------
 
      printf("Informe os dados da segunda carta: \n\n");
-     // Para adicionar novos atributos à Carta 2, adcione conforme o exemplo:
-     // printf("*ATRITBUTO A SER UTILIZADO: *")
-     // scanf("ESPECIFICADOR DE FORMATO", VARIÁVEL *se for o caso adcione o índicie[1]*)
+     /* Para adicionar novos atributos à Carta 2, adcione conforme o exemplo:
+      printf("*ATRITBUTO A SER UTILIZADO: *")
+      scanf("ESPECIFICADOR DE FORMATO", VARIÁVEL *se for o caso adcione o índicie[1]*)*/
      // Use o *getchar()* após o scanf  do codigo para "limpar" o caractere que fica sobrando. Se não usar, o fgets lê o vazio.
      // Use o fgets para inserção das cidades, pois algumas tem nomes compostos.
 
      printf("Estado: ");
      scanf(" %c", &estado2);  // O espaço antes de %c descarta o '\n' (Enter) deixado pelo scanf anterior no buffer.
+
      printf("Código: ");
      scanf("%s", codigo2);
+     
      getchar();
+     
      printf("Nome da Cidade: ");
      fgets(cidade2, 30, stdin);
      cidade2[strcspn(cidade2, "\n")]='\0';
+     
      printf("População: ");
      scanf("%d", &populacao[1]);
+     
      printf("Área (em km²): ");
      scanf("%f", &area[1]);
+     
      printf("PIB (em bilhões): ");
      scanf("%f", &pib[1]);
+     
      printf("Número de Pontos Turísticos: ");
      scanf("%d", &pontos_turisticos[1]);
 
@@ -108,13 +119,12 @@ int main(){
     
      pib_per[1] = (pib[1] *  pow(10, 9)) / (float) populacao[1];
      populcao_den[1] = (float) populacao[1] / area[1];
-     super_poder[1] = (float) populacao[1] + (float) pontos_turisticos[1] + pib[1] +
-                        area[1] + pib_per[1] + (1 / populcao_den[1]); 
+     super_poder[1] = (float) populacao[1] + (float) pontos_turisticos[1] + pib[1] + area[1] + pib_per[1] + (1 / populcao_den[1]); 
      
-     // ---LEMBRAR---
+     // ---APRESENTAÇÃO DA CARTA 2---
      //*TODOS* os atributos adicionados terão de aparecer na apresentação da carta.
      /* Exemplo:
-      printf("\nCarta 1\n");
+      printf("\nCarta 2\n");
       printf("*ATRIBUTO ADICIONADO*: ESPECIFICADOR DE FORMATO\n", VARIÁVEL);*/
 
      printf("\nCarta 2\n");
@@ -129,9 +139,14 @@ int main(){
      printf("PIB per Capita: %.2f reais\n", pib_per[1]);
      printf("Super Poder: %.2f\n\n", super_poder[1]);
 
+
+
      //Placar Vencedor:
 
      printf("Comparação de Cartas: \n\n");
+
+     //População:
+
      printf("Atributo - População\n");
      printf("Carta 1 (%s): %d\n", cidade1, populacao[0]);
      printf("Carta 2 (%s): %d\n", cidade2, populacao[1]);
@@ -141,7 +156,10 @@ int main(){
         else{
             printf(" Carta vencedora: Carta 2 (%s)\n\n", cidade2); 
         }
-    printf("Atributo - Área\n");
+
+     //Área:
+
+     printf("Atributo - Área\n");
      printf("Carta 1 (%s): %.2f\n", cidade1, area[0]);
      printf("Carta 2 (%s): %.2f\n", cidade2, area[1]);
         if(area[0] > area[1]){
@@ -150,6 +168,9 @@ int main(){
         else{
             printf(" Carta vencedora: Carta 2 (%s)\n\n", cidade2); 
         }
+    
+     //PIB:
+
      printf("Atributo - PIB\n");
      printf("Carta 1 (%s): %.2f\n", cidade1, pib[0]);
      printf("Carta 2 (%s): %.2f\n", cidade2, pib[1]);
@@ -159,6 +180,9 @@ int main(){
         else{
             printf(" Carta vencedora: Carta 2 (%s)\n\n", cidade2); 
         }
+
+     //Pontos Turísticos:
+
      printf("Atributo - Pontos Turísticos\n");
      printf("Carta 1 (%s): %d\n", cidade1, pontos_turisticos[0]);
      printf("Carta 2 (%s): %d\n", cidade2, pontos_turisticos[1]);
@@ -168,6 +192,9 @@ int main(){
         else{
             printf(" Carta vencedora: Carta 2 (%s)\n\n", cidade2); 
         }
+    
+     //Densidade Populacional:
+
      printf("Atributo - Densidade Populacional\n");
      printf("Carta 1 (%s): %.2f\n", cidade1, populcao_den[0]);
      printf("Carta 2 (%s): %.2f\n", cidade2, populcao_den[1]);
@@ -177,6 +204,9 @@ int main(){
         else{
             printf(" Carta vencedora: Carta 2 (%s)\n\n", cidade2); 
         }
+
+     //PIB per Capita:
+
      printf("Atributo - PIB per Capita\n");
      printf("Carta 1 (%s): %.2f\n", cidade1, pib_per[0]);
      printf("Carta 2 (%s): %.2f\n", cidade2, pib_per[1]);
@@ -186,6 +216,9 @@ int main(){
         else{
             printf(" Carta vencedora: Carta 2 (%s)\n\n", cidade2); 
         }
+
+     //Super Poder:
+
      printf("Atributo - Super Poder\n");
      printf("Carta 1 (%s): %.2f\n", cidade1, super_poder[0]);
      printf("Carta 2 (%s): %.2f\n", cidade2, super_poder[1]);

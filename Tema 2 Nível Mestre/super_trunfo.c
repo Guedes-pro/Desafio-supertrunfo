@@ -50,10 +50,7 @@ int main(){
 
      pib_per[0] = (pib[0] *  pow(10, 9)) / (float) populacao[0]; 
      populcao_den[0] = (float) populacao[0] / area[0];
-     super_poder[0] = (float) populacao[0] + (float) pontos_turisticos[0] + pib[0] +
-                        area[0] + pib_per[0] + (1 / populcao_den[0]); 
-
-     
+     super_poder[0] = (float) populacao[0] + (float) pontos_turisticos[0] + pib[0] + area[0] + pib_per[0] + (1 / populcao_den[0]); 
 
      
      
@@ -108,9 +105,10 @@ int main(){
     
      pib_per[1] = (pib[1] *  pow(10, 9)) / (float) populacao[1];
      populcao_den[1] = (float) populacao[1] / area[1];
-     super_poder[1] = (float) populacao[1] + (float) pontos_turisticos[1] + pib[1] +
-                        area[1] + pib_per[1] + (1 / populcao_den[1]); 
-     
+     super_poder[1] = (float) populacao[1] + (float) pontos_turisticos[1] + pib[1] + area[1] + pib_per[1] + (1 / populcao_den[1]); 
+
+
+
      // ---LEMBRAR---
      //*TODOS* os atributos adicionados terão de aparecer na apresentação da carta.
      /* Exemplo:
@@ -129,7 +127,7 @@ int main(){
      printf("PIB per Capita: %.2f reais\n", pib_per[1]);
      printf("Super Poder: %.2f\n\n", super_poder[1]);
 
-     //Placar Vencedor:
+     //Placar Vencedor: (Considere como condição verdadeira "1" a Carta 1 e falso "0" a Carta 2)
 
      printf("Comparação de Cartas: \n");
      printf("*** Carta 1: 1 / Carta 2: 0 ***\n");
