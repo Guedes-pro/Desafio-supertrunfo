@@ -152,7 +152,6 @@ int main(){
      switch (escolha){
 
         case 1:  //Nome da Cidade:
-
          printf("\nAtributo - Nome da Cidade\n");
          printf("Carta 1 : %s\n", cidade1);
          printf("Carta 2 : %s\n", cidade2);
@@ -160,7 +159,6 @@ int main(){
         break;
 
         case 2:  //População:
-
          printf("\nAtributo - População\n");
          printf("Carta 1 (%s): %u\n", cidade1, populacao[0]);
          printf("Carta 2 (%s): %u\n", cidade2, populacao[1]);
@@ -187,7 +185,6 @@ int main(){
         break;
 
         case 4:  //PIB:
-
          printf("\nAtributo - PIB\n");
          printf("Carta 1 (%s): %.2f\n", cidade1, pib[0]);
          printf("Carta 2 (%s): %.2f\n", cidade2, pib[1]);
@@ -202,7 +199,6 @@ int main(){
         break;
 
         case 5:  //Pontos Turísticos:
-
          printf("\nAtributo - Pontos Turísticos\n");
          printf("Carta 1 (%s): %u\n", cidade1, pontos_turisticos[0]);
          printf("Carta 2 (%s): %u\n", cidade2, pontos_turisticos[1]);
@@ -217,7 +213,6 @@ int main(){
         break;
 
         case 6:  //Densidade Demográfica:
-
          printf("\nAtributo - Densidade Demográfica\n");
          printf("Carta 1 (%s): %.2f\n", cidade1, populcao_den[0]);
          printf("Carta 2 (%s): %.2f\n", cidade2, populcao_den[1]);
@@ -231,7 +226,6 @@ int main(){
         break;
 
         case 7:  //PIB per Capita:
-
          printf("\nAtributo - PIB per Capita\n");
          printf("Carta 1 (%s): %.2f\n", cidade1, pib_per[0]);
          printf("Carta 2 (%s): %.2f\n", cidade2, pib_per[1]);
@@ -246,7 +240,6 @@ int main(){
         break;
 
         case 8:  //Super Poder:
-
          printf("\nAtributo - Super Poder\n");
          printf("Carta 1 (%s): %.2f\n", cidade1, super_poder[0]);
          printf("Carta 2 (%s): %.2f\n", cidade2, super_poder[1]);
